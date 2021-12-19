@@ -1,0 +1,55 @@
+.movie {
+    &__list {
+        padding-right: 80px;
+    }
+
+    &__posters {
+        display: flex;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        margin-left: 2%;
+        padding: 20px;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &__poster {
+        object-fit: contain;
+        width: 100%;
+        max-height: 100px;
+        margin: 10px 10px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        &--lrg {
+            min-height: 250px;
+            max-height: 250px;
+
+            &:hover {
+                transform: scale(1.09);
+            }
+        }
+    }
+
+    &__title {
+        margin-left: 3%;
+        color: #fff;
+    }
+
+    &__details {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 900px;
+        height: 500px;
+
+        background-color: #333;
+    }
+}
